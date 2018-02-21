@@ -48,6 +48,32 @@ public class MainActivity extends AppCompatActivity {
                                 num1 = Integer.parseInt(number1EditText.getText().toString().trim());
                                 num2 = Integer.parseInt(number2EditText.getText().toString().trim());
                                 result = num1 - num2;
+
+                                resultTextView.setText(result + "");
+
+                                multiplyButton.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+
+                                        num1 = Integer.parseInt(number1EditText.getText().toString().trim());
+                                        num2 = Integer.parseInt(number2EditText.getText().toString().trim());
+                                        result = num1 * num2;
+
+                                        resultTextView.setText(result + "");
+
+                                        divideButton.setOnClickListener(new View.OnClickListener() {
+                                            @Override
+                                            public void onClick(View view) {
+
+                                                num1 = Integer.parseInt(number1EditText.getText().toString().trim());
+                                                num2 = Integer.parseInt(number2EditText.getText().toString().trim());
+                                                result = num1 / num2;
+
+                                                resultTextView.setText(result + "");
+                                            }
+                                        });
+                                    }
+                                });
                             }
                         });
 
